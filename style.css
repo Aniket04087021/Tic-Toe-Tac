@@ -1,0 +1,123 @@
+body {
+    background: linear-gradient(to bottom right, #33ccff, #99ffcc); /* Updated gradient */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 6px;
+    background: linear-gradient(to bottom right, #b3e6ff, #ccffcc); /* Updated gradient */
+    border-radius: 10px; /* Added border-radius */
+    padding: 10px; /* Added padding */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#scoreboard {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#playerXScore, #playerOScore, #reset-score-btn {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#reset-score-btn, #reset-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+#reset-score-btn:hover, #reset-btn:hover {
+    background-color: #45a049;
+}
+
+#winner-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#winner-text {
+    margin-bottom: 20px;
+}
+
+#close-popup-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#winner-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px; /* Increase padding to make the pop-up bigger */
+    color: #fff;
+    border-radius: 20px; /* Increase border-radius for rounded corners */
+    text-align: center;
+    width: 400px; /* Set a specific width for the pop-up */
+}
+
+#winner-text {
+    margin-bottom: 20px;
+    font-size: 1.5rem; /* Increase font size for the winner text */
+}
+
+#close-popup-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
